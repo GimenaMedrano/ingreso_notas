@@ -6,7 +6,7 @@
         Console.WriteLine("Ingrese el número de alumnos a registrar: (-1 para salir)");
         if (!int.TryParse(Console.ReadLine(), out n))
         {
-            Console.WriteLine("Error: debe ingresar un número.");
+            Console.WriteLine("Error: debe ingresar un número diferente a 0, no se permiten cadenas de caracteres.");
         }
         else if (n == -1)
         {
