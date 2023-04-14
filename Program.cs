@@ -1,14 +1,18 @@
 ﻿void notas()
 {
     int n;
-    do
+ do
     {
-        Console.WriteLine("Ingrese el número de alumnos a registrar: (0 para salir)");
+        Console.WriteLine("Ingrese el número de alumnos a registrar: (-1 para salir)");
         if (!int.TryParse(Console.ReadLine(), out n))
         {
             Console.WriteLine("Error: debe ingresar un número.");
         }
-    } while (n <= 0);
+        else if (n == -1)
+        {
+            return; // Sale del método y del programa
+        }
+    } while (n <=0);
 
     string[] nombre = new string[n];
     int[] notas = new int[n];
